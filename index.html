@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Shop</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="shortcut icon" href="./assets/Drink Icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img 
+             src="./assets/logo.webp" 
+             alt="Logo"
+             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-300"
+            />
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">John's Shop</h1>
+            <span class="text-white font-medium">Rua Bernardo Manuel, 1229, Rio de Janeiro - RJ</span>
+            <div class="bg-green-700 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg às Sab  9h às 22h</span>
+            </div>
+        </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça Nosso Cardápio</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Destilados</h2>
+
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Red Label.webp" 
+                 alt="Red Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Johnnie Walker Red Label 1L</p>
+                    <p class="text-sm">Fresco & e picante com uma vibrante frutuosidade de maçã e cítricos, canela e notas de pimenta.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$84.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Red Label" data-price="84.99" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Black Label.webp" 
+                 alt="Black Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Johnnie Walker Black Label 1L</p>
+                    <p class="text-sm">Notas defumadas e turfadas que marcam a presença de carvão e madeira no processo de maturação.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$69.54</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Black Label" data-price="69.54" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Grants.webp" 
+                 alt="Black Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Grant's Triple Wood 1L</p>
+                    <p class="text-sm">Aroma fresco com notas de malte embora complexo e levemente doce com alusão a banana e caramelo.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$79.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Grant's" data-price="79.99" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Cachaça Ypioca Ouro Empalhada.webp" 
+                 alt="Black Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Cachaça Ypioca Ouro Empalhada 965ml</p>
+                    <p class="text-sm">Doce de sabor amadeirado e picante com aroma de madeira, cana-de-açúcar, baunilha e amêndoas.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$25.43</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Cachaça Ypioca Ouro Empalhada" data-price="25.43" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Green Label.webp" 
+                 alt="Green Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Johnnie Walker Green Label 1L</p>
+                    <p class="text-sm">Sabor aromático com notas herbais, florais e de especiarias.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$110.56</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Green Label" data-price="110.56" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Buchanans 12 Anos.webp" 
+                 alt="Buchanans 12 Anos" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Buchanans 12 Anos 1L</p>
+                    <p class="text-sm">Whisky suave, com notas citricas e frutadas. Seco e levemente esfumaçado.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$161.43</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Buchanans 12 Anos" data-price="161.43" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Ballantines American Barrel.webp" 
+                 alt="Ballantines American Barrel" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Ballantines American Barrel 1L</p>
+                    <p class="text-sm">Maçãs vermelhas e caramelo, doces e suaves combinadas com mel e baunilha e notas florais sutis.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$99.75</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Ballantines American Barrel" data-price="99.75" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Vodka Absolut Grapefruit.webp" 
+                 alt="Black Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Vodka Absolut Grapefruit 1L</p>
+                    <p class="text-sm">Intenso sabor de toranja com um toque adocicado.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$67.43</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Vodka Absolut Grapefruit" data-price="67.43" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Vodka Absolut Tradicional.webp" 
+                 alt="Vodka Absolut Tradicional" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Vodka Absolut Tradicional 1L</p>
+                    <p class="text-sm">Notas leves de caramelo e baunilha com uma finalização fresca e frutada.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$85.37</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Vodka Absolut Tradicional" data-price="85.37" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Gin Beefeater Pink London.webp" 
+                 alt="Vodka Absolut Tradicional" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Gin Beefeater Pink London 700ml</p>
+                    <p class="text-sm">Com uma tonalidade rosa suave, este gin apresenta um sabor equilibrado e delicado de morango.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$129.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Gin Beefeater Pink London" data-price="129.99" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Vodka Grey Goose.webp" 
+                 alt="Vodka Absolut Tradicional" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Vodka Grey Goose 750ml</p>
+                    <p class="text-sm">Marcante e caramelizado.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$80.50</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Vodka Grey Goose" data-price="80.50" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Vodka Absolut Vanilia.webp" 
+                 alt="Vodka Absolut Tradicional" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Vodka Absolut Vanilia 1L</p>
+                    <p class="text-sm">Favas de baunilha de madagascar com notas claras de toffee e caramelo.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$98.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Vodka Absolut Vanilia" data-price="98.99" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img 
+                 src="/assets/Ballantines Finest.webp" 
+                 alt="Black Label" 
+                 class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2" 
+                />
+
+                <div class="w-full">
+                    <p class="font-bold">Ballantines Finest 1L</p>
+                    <p class="text-sm">Um equilíbrio de sabores doces e sutis, como chocolate ao leite, maçã vermelha e baunilha.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$69.54</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Black Label" data-price="69.54" aria-label="button-add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-10 mb-6">Runs</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <div class="flex gap-2">
+                <img src="./assets/Rum Montilla Cristal.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Rum Montilla Cristal 1L</p>
+                    <p class="text-sm">destilado e envelhecido em barris de carvalho. Com uma graduação alcoólica de 40%, possui um sabor suave e agradável, perfeito para ser apreciado puro ou em diversos tipos de coquetéis.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img src="./assets/Rum Bacardi Big Apple.webp" alt="guaraná-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Rum Bacardi Big Apple 980ml</p>
+                    <p class="text-sm">Rum com sabor de maçã verde que é produzido pela Bacardi Limited.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$39.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Bacardi Big Apple" 
+                        data-price="39.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-center">
+                <img src="./assets/Rum Bacardi Carta Oro.webp" alt="guaraná-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Rum Bacardi Carta Oro 980ml</p>
+                    <p class="text-sm">possui aromas de baunilha e frutas tropicais. Ideal para elaboração de coquetéis com sabores mais marcantes.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$39.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Bacardi Big Apple" 
+                        data-price="39.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-10 mb-6">Cervejas</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <div class="flex gap-2">
+                <img src="./assets/Stella Artois 330ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Stella Artois 330ml</p>
+                    <p class="text-sm">Cerveja puro malte belga leve, de cor amarela, com aparência cristalina, 5% de teor alcoólico, aroma suave, notas maltadas e amargor baixo.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/Brahma Duplo Malte 330ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Brahma Duplo Malte 330ml</p>
+                    <p class="text-sm">Uma Combinação surpreendente entre a leveza do Malte Pilsen e o sabor do Malte Munich e Malte diferenciado.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/Budweiser 330ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Budweiser 330ml</p>
+                    <p class="text-sm">Levedura própria garante o aroma frutal e a maior refrescância.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/Heineken 330ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Heineken 330ml</p>
+                    <p class="text-sm">Produzida para ser a melhor desde 1873 e feita da mesma forma desde então. Contém apenas três ingredientes principais: cevada, lúpulo e água.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/Bohemia 355ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Bohemia 355ml</p>
+                    <p class="text-sm">Clara, leve e muito refrescante: uma cerveja para todos os momentos.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/Spaten 355ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Spaten 355ml</p>
+                    <p class="text-sm">Feita a partir de maltes puros e seu sabor é mais suave do que outros tipos de cervejas alemãs, sem perder força e intensidade.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/Corona Extra 330ml.webp" alt="coca-lata" 
+                class="w-28 h-28 rounded-md duration-300 hover:scale-110 hover:-rotate-2">
+
+                <div class="w-full">
+                    <p class="font-bold">Corona Extra 330ml</p>
+                    <p class="text-sm">Refrescante, cerveja natural para socializar.</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$30.99</p>
+                        <button class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-950 duration-200 add-to-cart-btn" data-name="Rum Montilla Cristal" 
+                        data-price="30.99" aria-label="button-add-to-cart">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center" id="cart-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] max-h-[90%] overflow-y-auto md:min-w-[600px]">
+            <h2 class="text-center text-2xl font-bold mb-2">Meu Carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col">
+
+            </div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de Entrega: </p>
+            <input type="text" placeholder="Digite seu Endereço Completo..." id="addres" 
+            class="w-full border-2 p-1 rounded my-1">
+            <p class="text-red-500 hidden" id="addres-warn">Digite seu Endereço Completo!</p>
+
+            <div class="flex justify-between mt-4 items-center w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center justify-center gap-2 bg-purple-500 py-3 text-white font-bold w-full h-full hover:bg-purple-600 duration-300" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Ver meu Carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
